@@ -70,8 +70,7 @@ The design focuses on **Visual Excellence**. Every pixel is placed with intent, 
 
 **Oussama Essakani (Orphiqo)**
 - **Roles**: Graphic Designer | Web Developer | Web Designer | Brand Identity Designer
-- **Portfolio**: [Orphiqo.com](https://orphiqo.com)
-- **Live Demo**: [Vanilla Version](https://oussamaessakani1.github.io/portfolio_essakani_oussama/)
+- **Portfolio**: [GitHub Pages](https://oussamaessakani1.github.io/portfolio_essakani_oussama/)
 - **Contact**: orphiqo@gmail.com
 
 ---
