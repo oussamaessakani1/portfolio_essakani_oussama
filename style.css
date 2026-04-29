@@ -43,6 +43,11 @@ body:not(.light-mode) {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+section {
+    scroll-margin-top: 80px;
 }
 
 body {
@@ -832,36 +837,711 @@ body:not(.light-mode) .creator-name {
     text-shadow: 0 0 10px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.4);
 }
 
-@media (max-width: 1024px) {
-    .nav-center, .nav-right .btn { display: none; }
-    .mobile-toggle { display: block; }
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .icons-row { flex-direction: row; position: static; transform: none; justify-content: center; margin-top: 40px;}
-    .social-links { position: static; flex-direction: column; }
-    .about-grid, .contact-grid { grid-template-columns: 1fr; }
-    .portfolio-grid, .skills-grid { grid-template-columns: repeat(2, 1fr); }
-    .footer-top, .footer-grid { flex-direction: column; gap: 40px; }
-}
-
-@media (max-width: 768px) {
-    .hero-text h1 { font-size: 48px; }
-    .portfolio-grid, .skills-grid { grid-template-columns: 1fr; }
-    .stats-row { flex-direction: column; gap: 24px; }
-    .footer-bottom { flex-direction: column; text-align: center; gap: 16px;}
-}
-
-
+/* ============================================================
+   MOBILE MENU OVERLAY (all sizes)
+   ============================================================ */
 .mobile-menu-overlay {
     position: fixed;
     inset: 0;
     background: var(--bg-main);
     z-index: 2000;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
-.mobile-menu-overlay.active { display: flex; }
-.menu-close { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 30px; color: var(--text-primary); }
-.mobile-nav { list-style: none; text-align: center; }
-.mobile-nav li { margin-bottom: 20px; }
-.mobile-nav a { font-size: 32px; color: var(--text-primary); text-decoration: none; font-weight: 700; }
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--text-primary);
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.menu-close:hover {
+    color: var(--accent-cyan);
+    background: var(--bg-card);
+}
+
+.mobile-nav {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-nav li {
+    margin-bottom: 0;
+}
+
+.mobile-nav a {
+    font-size: 28px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 40px;
+    border-radius: 16px;
+    display: block;
+    transition: var(--transition);
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.mobile-menu-overlay.active .mobile-nav a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.mobile-menu-overlay.active .mobile-nav li:nth-child(1) a { transition-delay: 0.1s; }
+.mobile-menu-overlay.active .mobile-nav li:nth-child(2) a { transition-delay: 0.15s; }
+.mobile-menu-overlay.active .mobile-nav li:nth-child(3) a { transition-delay: 0.2s; }
+.mobile-menu-overlay.active .mobile-nav li:nth-child(4) a { transition-delay: 0.25s; }
+.mobile-menu-overlay.active .mobile-nav li:nth-child(5) a { transition-delay: 0.3s; }
+
+.mobile-nav a:hover {
+    color: var(--accent-cyan);
+    background: var(--bg-card);
+}
+
+/* ============================================================
+   TABLET BREAKPOINT (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+    /* --- Navigation --- */
+    .nav-center,
+    .nav-right .btn {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    /* --- Hero Section ---
+       Exact mobile order: label → h1 → typewriter → image → subtext → CTAs
+       Achieved via display:contents on .hero-text so its children become
+       direct flex items of .hero-grid and can be individually ordered.
+    */
+    .hero-section {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+
+    /* Dissolve .hero-text so its children participate directly
+       in the .hero-grid flex layout */
+    .hero-text {
+        display: contents;
+    }
+
+    /* Assign explicit order to each hero element */
+    .hero-text .label-small   { order: 1; margin-bottom: 12px; }
+    .hero-text h1             { order: 2; font-size: 56px; letter-spacing: -1.5px; margin-bottom: 8px; }
+    .hero-text .typewriter-container {
+        order: 3;
+        justify-content: center;
+        margin-bottom: 28px;
+    }
+    /* Image sits at order 4 — between typewriter and subtext */
+    .hero-visual              { order: 4; margin-bottom: 28px; margin-top: 0; }
+    .hero-text .hero-subtext  { order: 5; margin-bottom: 32px; max-width: 520px; }
+    .hero-text .hero-ctas     { order: 6; justify-content: center; flex-wrap: wrap; }
+
+    .portrait-container {
+        width: 300px;
+        height: 360px;
+        border-radius: 24px;
+        margin: 0 auto;
+    }
+
+    /* Hide floating shapes on tablet/mobile */
+    .floating-shape {
+        display: none;
+    }
+
+    /* --- About Section --- */
+    .about-section {
+        padding: 80px 0;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        display: grid;
+        gap: 32px;
+    }
+
+    .about-left {
+        padding: 32px;
+    }
+
+    .about-right {
+        text-align: center;
+        padding: 0 16px;
+    }
+
+    .about-right .btn {
+        align-self: center;
+        margin: 0 auto;
+    }
+
+    .stats-row {
+        justify-content: center;
+    }
+
+    .section-header h2 {
+        font-size: 40px;
+    }
+
+    .section-sub {
+        font-size: 16px;
+    }
+
+    /* --- Portfolio & Skills Grids --- */
+    .portfolio-grid,
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-section,
+    .skills-section {
+        padding: 80px 0;
+    }
+
+    /* --- Contact Section --- */
+    .contact-section {
+        padding: 80px 0;
+    }
+
+    .contact-grid {
+        gap: 32px;
+    }
+
+    .contact-form-container {
+        padding: 32px;
+    }
+
+    /* --- Footer --- */
+    .footer-top,
+    .footer-grid {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .footer-col ul {
+        flex-wrap: wrap;
+    }
+}
+
+/* ============================================================
+   MOBILE BREAKPOINT (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* --- Global spacing --- */
+    .container {
+        padding: 0 20px;
+    }
+
+    /* --- Navbar --- */
+    .navbar {
+        height: 68px;
+    }
+
+    .navbar.scrolled {
+        height: 60px;
+    }
+
+    /* --- Hero Section --- */
+    .hero-section {
+        padding-top: 90px;
+        padding-bottom: 48px;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+        margin-bottom: 6px;
+    }
+
+    .hero-text .label-small {
+        font-size: 11px;
+        padding: 5px 12px;
+        margin-bottom: 16px;
+    }
+
+    .typewriter-container {
+        font-size: 20px;
+        height: 30px;
+        margin-bottom: 24px;
+    }
+
+    .hero-subtext {
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 400px;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 12px;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+    }
+
+    .portrait-container {
+        width: 240px;
+        height: 290px;
+        border-radius: 20px;
+    }
+
+    /* --- Section Headers --- */
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+        letter-spacing: -0.5px;
+    }
+
+    .section-sub {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+
+    /* --- About Section --- */
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-left {
+        padding: 24px;
+    }
+
+    .about-left h3 {
+        font-size: 20px;
+    }
+
+    .about-left p {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .tag-pills {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .pill {
+        padding: 12px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+
+    .about-right {
+        text-align: center;
+        padding: 0;
+    }
+
+    .about-right h3 {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    .about-right p {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .stats-row {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-around;
+        margin-top: 32px;
+    }
+
+    .stat-num {
+        font-size: 36px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+    /* --- Portfolio Section --- */
+    .portfolio-section {
+        padding: 60px 0;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .portfolio-card {
+        padding: 24px;
+    }
+
+    .portfolio-icon-box {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 14px;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-card h3 {
+        font-size: 17px;
+    }
+
+    .portfolio-card p {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    /* --- Skills Section --- */
+    .skills-section {
+        padding: 60px 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-card {
+        padding: 20px;
+    }
+
+    .skill-card h3 {
+        font-size: 15px;
+    }
+
+    .skill-card p {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    /* --- Contact Section --- */
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-grid {
+        gap: 24px;
+    }
+
+    .contact-form-container {
+        padding: 24px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 14px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .submit-btn {
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    .info-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .info-card i {
+        font-size: 20px;
+    }
+
+    /* --- Footer --- */
+    .footer {
+        padding: 40px 0 24px;
+        margin-top: 40px;
+    }
+
+    .footer-top {
+        margin-bottom: 40px;
+        gap: 24px;
+    }
+
+    .footer-brand h2 {
+        font-size: 26px;
+    }
+
+    .footer-brand p {
+        font-size: 14px;
+    }
+
+    .footer-grid {
+        gap: 24px;
+    }
+
+    .footer-col .label-small {
+        font-size: 11px;
+    }
+
+    .footer-col ul {
+        gap: 16px;
+    }
+
+    .footer-col ul a {
+        font-size: 13px;
+    }
+
+    .footer-col p {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding-top: 24px;
+        font-size: 12px;
+    }
+}
+
+/* ============================================================
+   SMALL MOBILE BREAKPOINT (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+        letter-spacing: -0.5px;
+    }
+
+    .hero-text .label-small {
+        font-size: 10px;
+        padding: 4px 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .typewriter-container {
+        font-size: 17px;
+        height: 26px;
+    }
+
+    .hero-subtext {
+        font-size: 14px;
+    }
+
+    .portrait-container {
+        width: 200px;
+        height: 240px;
+        border-radius: 18px;
+    }
+
+    .section-header h2 {
+        font-size: 26px;
+    }
+
+    .section-sub {
+        font-size: 14px;
+    }
+
+    .about-left h3 {
+        font-size: 18px;
+    }
+
+    .about-right h3 {
+        font-size: 20px;
+    }
+
+    .tag-pills {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .stat-num {
+        font-size: 32px;
+    }
+
+    .portfolio-card {
+        padding: 20px;
+    }
+
+    .skill-card {
+        padding: 18px;
+    }
+
+    .contact-form-container {
+        padding: 20px;
+    }
+
+    .info-card {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .mobile-nav a {
+        font-size: 24px;
+        padding: 10px 32px;
+    }
+
+    .footer-brand h2 {
+        font-size: 22px;
+    }
+
+    .footer-col ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 12px 22px;
+    }
+
+    .response-time {
+        font-size: 12px;
+    }
+
+    .fine-print {
+        font-size: 10.5px;
+    }
+}
+
+/* ============================================================
+   PREVENT HORIZONTAL OVERFLOW (all mobile)
+   ============================================================ */
+@media (max-width: 1024px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    img, video, iframe, svg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .blob {
+        width: 300px;
+        height: 300px;
+        filter: blur(80px);
+        opacity: 0.1;
+    }
+}
+
+/* ============================================================
+   REVEAL ANIMATIONS (preserved)
+   ============================================================ */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-reveal].active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* When .hero-text uses display:contents on mobile,
+   it has no visual box, so its children are revealed directly.
+   Ensure the flex children are centered in .hero-grid. */
+@media (max-width: 1024px) {
+    /* hero-text children become direct flex items of hero-grid;
+       center them all */
+    .hero-text .label-small,
+    .hero-text h1,
+    .hero-text .typewriter-container,
+    .hero-text .hero-subtext,
+    .hero-text .hero-ctas {
+        align-self: center;
+        text-align: center;
+    }
+
+    .hero-text .label-small {
+        width: fit-content;
+        margin-inline: auto;
+    }
+
+    .hero-text h1,
+    .hero-text .hero-subtext {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    /* Typewriter stays inline-flex but centered */
+    .hero-text .typewriter-container {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        max-width: none;
+    }
+
+    /* CTAs should not stretch full width on tablet */
+    .hero-text .hero-ctas {
+        width: auto;
+        max-width: none;
+    }
+
+    /* Since hero-text is display:contents, its [data-reveal]
+       opacity:0 state becomes irrelevant (no box),
+       but we should make children visible immediately —
+       the hero-visual still animates via its own data-reveal. */
+    .hero-text[data-reveal] {
+        opacity: 1;
+        transform: none;
+    }
+}
