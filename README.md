@@ -89,16 +89,56 @@ The project follows a clean, professional directory structure for better maintai
 Explore the visual excellence of Orphiqo through these curated previews. Click on a title to reveal the screenshot.
 
 ### 🌓 Global Themes
-- <details><summary><b>Light Mode Preview</b></summary><br>![Light Mode](./preview/Light-mode.png)</details>
-- <details><summary><b>Dark Mode Preview</b></summary><br>![Dark Mode](./preview/Dark-mode.png)</details>
+
+<details>
+<summary><b>Light Mode Preview</b></summary>
+
+![Light Mode](./preview/Light-mode.png)
+</details>
+
+<details>
+<summary><b>Dark Mode Preview</b></summary>
+
+![Dark Mode](./preview/Dark-mode.png)
+</details>
 
 ### 🎭 Case Study Previews
-- <details><summary><b>Brand Identity Design</b></summary><br>![Brand Identity Design](./preview/Brand-Identity-Design.png)</details>
-- <details><summary><b>Mobile App UI Design</b></summary><br>![Mobile App UI Design](./preview/Mobile-App-UI-Design.png)</details>
-- <details><summary><b>Print Campaign Design</b></summary><br>![Print Campaign Design](./preview/Print-Campaign-Design.png)</details>
-- <details><summary><b>Web Development</b></summary><br>![Web Development](./preview/Web-Development.png)</details>
-- <details><summary><b>Digital Illustrations</b></summary><br>![Digital Illustrations](./preview/Digital-Illustrations.png)</details>
-- <details><summary><b>Logo Collection</b></summary><br>![Logo Collection](./preview/Logo-Collection.png)</details>
+
+<details>
+<summary><b>Brand Identity Design</b></summary>
+
+![Brand Identity Design](./preview/Brand-Identity-Design.png)
+</details>
+
+<details>
+<summary><b>Mobile App UI Design</b></summary>
+
+![Mobile App UI Design](./preview/Mobile-App-UI-Design.png)
+</details>
+
+<details>
+<summary><b>Print Campaign Design</b></summary>
+
+![Print Campaign Design](./preview/Print-Campaign-Design.png)
+</details>
+
+<details>
+<summary><b>Web Development</b></summary>
+
+![Web Development](./preview/Web-Development.png)
+</details>
+
+<details>
+<summary><b>Digital Illustrations</b></summary>
+
+![Digital Illustrations](./preview/Digital-Illustrations.png)
+</details>
+
+<details>
+<summary><b>Logo Collection</b></summary>
+
+![Logo Collection](./preview/Logo-Collection.png)
+</details>
 
 ---
 
