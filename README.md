@@ -91,53 +91,53 @@ Explore the visual excellence of Orphiqo through these curated previews. Click o
 ### 🌓 Global Themes
 
 <details>
-<summary><b>Light Mode Preview</b></summary>
-
-![Light Mode](./preview/Light-mode.png)
+<summary><b>Light Mode Preview (Click to expand)</b></summary>
+<br>
+<img src="preview/Light-mode.png" alt="Light Mode" width="100%">
 </details>
 
 <details>
-<summary><b>Dark Mode Preview</b></summary>
-
-![Dark Mode](./preview/Dark-mode.png)
+<summary><b>Dark Mode Preview (Click to expand)</b></summary>
+<br>
+<img src="preview/Dark-mode.png" alt="Dark Mode" width="100%">
 </details>
 
 ### 🎭 Case Study Previews
 
 <details>
 <summary><b>Brand Identity Design</b></summary>
-
-![Brand Identity Design](./preview/Brand-Identity-Design.png)
+<br>
+<img src="preview/Brand-Identity-Design.png" alt="Brand Identity Design" width="100%">
 </details>
 
 <details>
 <summary><b>Mobile App UI Design</b></summary>
-
-![Mobile App UI Design](./preview/Mobile-App-UI-Design.png)
+<br>
+<img src="preview/Mobile-App-UI-Design.png" alt="Mobile App UI Design" width="100%">
 </details>
 
 <details>
 <summary><b>Print Campaign Design</b></summary>
-
-![Print Campaign Design](./preview/Print-Campaign-Design.png)
+<br>
+<img src="preview/Print-Campaign-Design.png" alt="Print Campaign Design" width="100%">
 </details>
 
 <details>
 <summary><b>Web Development</b></summary>
-
-![Web Development](./preview/Web-Development.png)
+<br>
+<img src="preview/Web-Development.png" alt="Web Development" width="100%">
 </details>
 
 <details>
 <summary><b>Digital Illustrations</b></summary>
-
-![Digital Illustrations](./preview/Digital-Illustrations.png)
+<br>
+<img src="preview/Digital-Illustrations.png" alt="Digital Illustrations" width="100%">
 </details>
 
 <details>
 <summary><b>Logo Collection</b></summary>
-
-![Logo Collection](./preview/Logo-Collection.png)
+<br>
+<img src="preview/Logo-Collection.png" alt="Logo Collection" width="100%">
 </details>
 
 ---
