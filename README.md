@@ -84,6 +84,14 @@ The project follows a clean, professional directory structure for better maintai
 
 ---
 
+## 📐 Design System & Mockups
+
+The Orphiqo portfolio was meticulously planned and prototyped to ensure a high-end user experience. You can explore the original design system, typography, and layout explorations in the official Figma mockup:
+
+[**🔗 View Figma Design Mockup**](https://www.figma.com/design/biA6mPDFJcB9R6LmT9ctjO/Orphiqo-Portfolio?m=auto&t=a0xs5Fc6Sp0GlpAh-1)
+
+---
+
 ## 📸 Screenshots & Previews
 
 Explore the visual excellence of Orphiqo through these curated previews. Click on a title to reveal the screenshot.
