@@ -122,7 +122,7 @@ function buildSection(p) {
        </button>`
     : '';
 
-  const githubBtn = p.githubUrl && p.githubUrl !== '#'
+  const githubBtn = p.githubUrl && p.githubUrl !== '#' && p.githubUrl !== ''
     ? `<a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer"
           class="pd-link-btn secondary">
           ⌥ GitHub Repo
