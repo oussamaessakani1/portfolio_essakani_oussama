@@ -115,10 +115,22 @@
   white-space: nowrap;
   transition: var(--transition);
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .pd-back-link:hover {
   color: var(--text-primary);
+}
+
+.pd-back-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.pd-back-text {
+  /* visible by default on desktop */
 }
 
 .pd-tabs-scroll {
@@ -516,69 +528,338 @@ body.light-mode .pd-tab.active {
   transform: translateY(-3px);
 }
 
+/* ============================================
+   TABLET  (max 768px)
+   ============================================ */
 @media (max-width: 768px) {
+
+  /* --- Top nav bar --- */
   .pd-topnav {
-      top: 0;
+    top: 0;
   }
 
   .pd-topnav-inner {
-    padding: 0 20px;
-    gap: 16px;
-    height: 56px;
+    padding: 0 16px;
+    gap: 12px;
+    height: 52px;
   }
 
+  /* --- Back button: icon pill on tablet --- */
   .pd-back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+    flex-shrink: 0;
+    box-shadow: var(--glass-shadow);
+  }
+
+  .pd-back-link:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+  }
+
+  .pd-back-icon {
+    font-size: 0.95rem;
+  }
+
+  .pd-back-text {
     display: none;
   }
 
+  /* subtle divider after the back button */
+  .pd-back-link::after {
+    display: none;
+  }
+
+  .pd-topnav-inner::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 24px;
+    background: var(--border-light);
+    flex-shrink: 0;
+    order: 1;
+  }
+
+  .pd-tabs-scroll {
+    order: 2;
+  }
+
+  .pd-tab {
+    padding: 7px 14px;
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+
+  .pd-tab-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* --- Sections --- */
   .pd-sections {
     padding: 0 20px;
   }
 
   .pd-section {
-    padding: 40px 0 56px;
+    padding: 32px 0 48px;
   }
 
+  /* --- Hero --- */
+  .pd-hero {
+    margin-bottom: 36px;
+  }
+
+  .pd-hero-title {
+    font-size: clamp(1.75rem, 6vw, 2.4rem);
+    letter-spacing: -0.015em;
+  }
+
+  .pd-hero-short {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .pd-accent-bar {
+    width: 44px;
+    height: 4px;
+    margin-bottom: 18px;
+  }
+
+  /* --- Info cards: 2-col --- */
   .pd-info-cards {
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .pd-info-card {
+    padding: 18px 16px;
+    border-radius: 14px;
   }
 
   .pd-info-cards .pd-info-card:last-child {
     grid-column: span 2;
   }
 
+  .pd-info-icon {
+    font-size: 1.2rem;
+  }
+
+  .pd-info-value {
+    font-size: 0.95rem;
+  }
+
+  /* --- Content blocks --- */
+  .pd-block {
+    margin-bottom: 40px;
+  }
+
+  .pd-block-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .pd-block-title::after {
+    max-width: 80px;
+  }
+
+  /* --- Challenge card --- */
   .pd-challenge-card {
-    padding: 24px 22px;
+    padding: 22px 20px;
+    border-radius: 16px;
   }
 
-  .pd-hero-title {
-    font-size: 2rem;
+  .pd-challenge-text {
+    font-size: 0.95rem;
   }
 
+  /* --- Tech tags --- */
+  .pd-tech-list {
+    gap: 8px;
+  }
+
+  .pd-tech-tag {
+    padding: 6px 13px;
+    font-size: 0.78rem;
+  }
+
+  /* --- Features --- */
+  .pd-feature-item {
+    font-size: 0.92rem;
+  }
+
+  /* --- Action buttons --- */
+  .pd-links-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pd-link-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+  }
+
+  /* --- Scroll top --- */
   .pd-scroll-top {
-    bottom: 24px;
-    right: 24px;
+    bottom: 20px;
+    right: 16px;
     width: 40px;
     height: 40px;
+    font-size: 1rem;
   }
 }
 
+/* ============================================
+   PHONE  (max 480px)
+   ============================================ */
 @media (max-width: 480px) {
+
+  .pd-topnav-inner {
+    height: 48px;
+    padding: 0 12px;
+  }
+
+  .pd-tab {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .pd-sections {
+    padding: 0 16px;
+  }
+
+  .pd-section {
+    padding: 28px 0 40px;
+  }
+
+  /* Hero goes fully single column, tight spacing */
+  .pd-hero {
+    margin-bottom: 28px;
+  }
+
+  .pd-hero-top {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .pd-hero-title {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .pd-hero-short {
+    font-size: 0.93rem;
+  }
+
+  /* Info cards: single full-width column */
   .pd-info-cards {
     grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 32px;
   }
 
   .pd-info-cards .pd-info-card:last-child {
     grid-column: span 1;
   }
 
-  .pd-links-row {
-    flex-direction: column;
+  .pd-info-card {
+    padding: 16px 14px;
+    border-radius: 12px;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
   }
 
-  .pd-link-btn {
-    justify-content: center;
+  .pd-info-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .pd-info-label {
+    font-size: 0.65rem;
+    margin-top: 0;
+  }
+
+  .pd-info-value {
+    font-size: 0.9rem;
+  }
+
+  /* Blocks */
+  .pd-block {
+    margin-bottom: 32px;
+  }
+
+  .pd-block-title {
+    font-size: 0.67rem;
+    margin-bottom: 14px;
+  }
+
+  .pd-block-text {
+    font-size: 0.92rem;
+  }
+
+  /* Challenge card edge-to-edge feel */
+  .pd-challenge-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  /* Feature items */
+  .pd-feature-item {
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+
+  .pd-feature-check {
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
+  }
+
+  /* Modal becomes a bottom-sheet on phones */
+  .pd-modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .pd-modal {
+    border-radius: 24px 24px 0 0;
+    padding: 40px 20px 32px;
+    max-width: 100%;
+    animation: pd-modal-sheet-in 0.35s cubic-bezier(0.34, 1.2, 0.64, 1);
+  }
+
+  @keyframes pd-modal-sheet-in {
+    from { opacity: 0; transform: translateY(100%); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .pd-modal-title {
+    font-size: 1.35rem;
+  }
+
+  .pd-modal-body {
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+  }
+
+  .pd-modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pd-modal-btn {
+    width: 100%;
+    padding: 14px 20px;
   }
 }
 

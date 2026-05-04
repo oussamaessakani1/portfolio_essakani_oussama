@@ -14,8 +14,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="project-details.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/project-details.css" />
 </head>
 
 <body>
@@ -40,7 +40,10 @@
 
       <nav class="pd-topnav" id="pd-topnav" aria-label="Project navigation">
         <div class="pd-topnav-inner">
-          <a href="index.html#portfolio" class="pd-back-link">← All Projects</a>
+          <a href="index.html#portfolio" class="pd-back-link" aria-label="Back to Portfolio">
+            <span class="pd-back-icon" aria-hidden="true">←</span>
+            <span class="pd-back-text">All Projects</span>
+          </a>
           <div class="pd-tabs-scroll">
             <div class="pd-tabs" id="pd-tabs"></div>
           </div>
@@ -78,8 +81,8 @@
 
   <button class="pd-scroll-top hidden" id="pd-scroll-top" aria-label="Scroll to top">↑</button>
 
-  <script src="script.js"></script>
-  <script src="project-details.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/project-details.js"></script>
 </body>
 
 </html>

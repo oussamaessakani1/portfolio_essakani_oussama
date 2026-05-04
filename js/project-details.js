@@ -33,7 +33,7 @@ async function init() {
 }
 
 async function fetchProjects() {
-  const res = await fetch('projects.json');
+  const res = await fetch('data/projects.json');
   if (!res.ok) throw new Error(`Could not load projects.json (HTTP ${res.status})`);
   const data = await res.json();
   if (!Array.isArray(data) || data.length === 0) throw new Error('projects.json is empty or malformed.');
