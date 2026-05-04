@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Details — Oussama Essakani</title>
+  <meta name="description" content="Detailed case studies of Oussama Essakani's design and development projects — branding, UI/UX, print, web development, illustration, and logo design.">
+  <meta name="keywords" content="Oussama Essakani, Orphiqo, Project Details, Brand Identity, UI UX Design, Web Development, Portfolio">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project-details.css" />
+</head>
+
+<body>
+  <div class="noise-overlay"></div>
+
+
+  <main class="pd-main" id="pd-main">
+
+    <div class="pd-loading" id="pd-loading">
+      <div class="pd-spinner"></div>
+      <p class="pd-loading-text">Loading projects...</p>
+    </div>
+
+    <div class="pd-error hidden" id="pd-error">
+      <div class="pd-error-icon">⚠️</div>
+      <h2 class="pd-error-title">Failed to Load Projects</h2>
+      <p class="pd-error-msg" id="pd-error-msg">Unable to fetch project data.</p>
+      <a href="index.html#projects" class="pd-btn-back">← Back to Projects</a>
+    </div>
+
+    <div class="pd-wrapper hidden" id="pd-wrapper">
+
+      <nav class="pd-topnav" id="pd-topnav" aria-label="Project navigation">
+        <div class="pd-topnav-inner">
+          <a href="index.html#portfolio" class="pd-back-link">← All Projects</a>
+          <div class="pd-tabs-scroll">
+            <div class="pd-tabs" id="pd-tabs"></div>
+          </div>
+        </div>
+      </nav>
+
+      <div id="pd-sections" class="pd-sections"></div>
+
+    </div>
+  </main>
+
+
+
+
+  <div class="pd-modal-overlay hidden" id="pd-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="pd-modal-title">
+    <div class="pd-modal">
+      <button class="pd-modal-close" id="pd-modal-close" aria-label="Close">✕</button>
+      <div class="pd-modal-icon-wrap">
+        <div class="pd-modal-icon-ring"></div>
+        <span class="pd-modal-icon">🔭</span>
+      </div>
+      <p class="pd-modal-label">Live Preview</p>
+      <h2 class="pd-modal-title" id="pd-modal-title">Currently Under Wraps</h2>
+      <p class="pd-modal-body">
+        This project is live in the real world, but the case study demo link is
+        not publicly available at this time. Reach out directly to see a private walkthrough.
+      </p>
+      <div class="pd-modal-actions">
+        <a href="index.html#contact" class="pd-modal-btn primary">Contact Me</a>
+        <button class="pd-modal-btn secondary" id="pd-modal-dismiss">Go Back</button>
+      </div>
+      <p class="pd-modal-footnote">© Orphiqo — Oussama Essakani</p>
+    </div>
+  </div>
+
+  <button class="pd-scroll-top hidden" id="pd-scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="script.js"></script>
+  <script src="project-details.js"></script>
+</body>
+
+</html>
