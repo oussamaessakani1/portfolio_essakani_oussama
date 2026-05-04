@@ -84,6 +84,24 @@ The project follows a clean, professional directory structure for better maintai
 
 ---
 
+## 📸 Screenshots & Previews
+
+Explore the visual excellence of Orphiqo through these curated previews. Click on a title to reveal the screenshot.
+
+### 🌓 Global Themes
+- <details><summary><b>Light Mode Preview</b></summary><br><img src="preview/Light mode.png" alt="Light Mode" width="100%"></details>
+- <details><summary><b>Dark Mode Preview</b></summary><br><img src="preview/Dark mode.png" alt="Dark Mode" width="100%"></details>
+
+### 🎭 Case Study Previews
+- <details><summary><b>Brand Identity Design</b></summary><br><img src="preview/Brand Identity Design.png" alt="Brand Identity Design" width="100%"></details>
+- <details><summary><b>Mobile App UI Design</b></summary><br><img src="preview/Mobile App UI Design.png" alt="Mobile App UI Design" width="100%"></details>
+- <details><summary><b>Print Campaign Design</b></summary><br><img src="preview/Print Campaign Design.png" alt="Print Campaign Design" width="100%"></details>
+- <details><summary><b>Web Development</b></summary><br><img src="preview/Web Development.png" alt="Web Development" width="100%"></details>
+- <details><summary><b>Digital Illustrations</b></summary><br><img src="preview/Digital Illustrations.png" alt="Digital Illustrations" width="100%"></details>
+- <details><summary><b>Logo Collection</b></summary><br><img src="preview/Logo Collection.png" alt="Logo Collection" width="100%"></details>
+
+---
+
 ## 👨‍💻 Author
 
 **Oussama Essakani (Orphiqo)**
