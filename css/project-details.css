@@ -125,8 +125,10 @@
 }
 
 .pd-back-icon {
-  font-size: 1rem;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
 }
 
 .pd-back-text {
@@ -546,11 +548,11 @@ body.light-mode .pd-tab.active {
 
   /* --- Back button: icon pill on tablet --- */
   .pd-back-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     padding: 0;
     border-radius: 50%;
     background: var(--bg-card);

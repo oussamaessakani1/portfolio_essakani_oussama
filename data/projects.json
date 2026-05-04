@@ -101,7 +101,7 @@
     "challenges": "The main technical challenge was achieving smooth animations without sacrificing performance on lower-end mobile devices. I replaced scroll event listeners with the Intersection Observer API, which runs off the main thread and eliminated all jank. I also introduced will-change: transform on animated elements to hint the browser to promote them to their own GPU layer.",
     "outcome": "The application achieved a Lighthouse performance score of 94 on mobile and 98 on desktop. It became the foundation for this portfolio site and demonstrated that professional-grade web experiences can be built without any framework — just deep knowledge of HTML, CSS, and vanilla JavaScript.",
     "liveUrl": "https://oussamaessakani1.github.io/portfolio_essakani_oussama/#",
-    "githubUrl": "https://github.com/oussamaessakani1/portfolio_essakani_oussama"
+    "githubUrl": "#"
   },
   {
     "id": 5,
