@@ -89,16 +89,16 @@ The project follows a clean, professional directory structure for better maintai
 Explore the visual excellence of Orphiqo through these curated previews. Click on a title to reveal the screenshot.
 
 ### 🌓 Global Themes
-- <details><summary><b>Light Mode Preview</b></summary><br><img src="preview/Light%20mode.png" alt="Light Mode" width="100%"></details>
-- <details><summary><b>Dark Mode Preview</b></summary><br><img src="preview/Dark%20mode.png" alt="Dark Mode" width="100%"></details>
+- <details><summary><b>Light Mode Preview</b></summary><br>![Light Mode](./preview/Light-mode.png)</details>
+- <details><summary><b>Dark Mode Preview</b></summary><br>![Dark Mode](./preview/Dark-mode.png)</details>
 
 ### 🎭 Case Study Previews
-- <details><summary><b>Brand Identity Design</b></summary><br><img src="preview/Brand%20Identity%20Design.png" alt="Brand Identity Design" width="100%"></details>
-- <details><summary><b>Mobile App UI Design</b></summary><br><img src="preview/Mobile%20App%20UI%20Design.png" alt="Mobile App UI Design" width="100%"></details>
-- <details><summary><b>Print Campaign Design</b></summary><br><img src="preview/Print%20Campaign%20Design.png" alt="Print Campaign Design" width="100%"></details>
-- <details><summary><b>Web Development</b></summary><br><img src="preview/Web%20Development.png" alt="Web Development" width="100%"></details>
-- <details><summary><b>Digital Illustrations</b></summary><br><img src="preview/Digital%20Illustrations.png" alt="Digital Illustrations" width="100%"></details>
-- <details><summary><b>Logo Collection</b></summary><br><img src="preview/Logo%20Collection.png" alt="Logo Collection" width="100%"></details>
+- <details><summary><b>Brand Identity Design</b></summary><br>![Brand Identity Design](./preview/Brand-Identity-Design.png)</details>
+- <details><summary><b>Mobile App UI Design</b></summary><br>![Mobile App UI Design](./preview/Mobile-App-UI-Design.png)</details>
+- <details><summary><b>Print Campaign Design</b></summary><br>![Print Campaign Design](./preview/Print-Campaign-Design.png)</details>
+- <details><summary><b>Web Development</b></summary><br>![Web Development](./preview/Web-Development.png)</details>
+- <details><summary><b>Digital Illustrations</b></summary><br>![Digital Illustrations](./preview/Digital-Illustrations.png)</details>
+- <details><summary><b>Logo Collection</b></summary><br>![Logo Collection](./preview/Logo-Collection.png)</details>
 
 ---
 
